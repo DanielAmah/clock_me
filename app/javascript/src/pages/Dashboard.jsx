@@ -52,8 +52,7 @@ export default function Dashboard({ history }) {
 
   const isAdminString = localStorage.getItem(IS_ADMIN);
   const isAdmin = JSON.parse(isAdminString);
-  const userNameString = localStorage.getItem(USER_NAME);
-  const userName = JSON.parse(userNameString);
+
 
   const columns = [
     { id: "description", label: "Description", minWidth: 170 },
