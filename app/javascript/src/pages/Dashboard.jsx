@@ -52,10 +52,13 @@ export default function Dashboard({ history }) {
 
   const isAdminString = localStorage.getItem(IS_ADMIN);
   const isAdmin = JSON.parse(isAdminString);
+  const userNameString = localStorage.getItem(USER_NAME);
+  const userName = JSON.parse(userNameString);
 
   const columns = [
     { id: "description", label: "Description", minWidth: 170 },
     { id: "profession", label: "Profession", minWidth: 100, align: "center" },
+    isAdmin && { id: "user", label: "User", minWidth: 100, align: "center" },
     {
       id: "clock_in_time",
       label: "Clock In Time",
@@ -83,6 +86,7 @@ export default function Dashboard({ history }) {
   const createData = (
     id,
     description,
+    user,
     profession,
     clock_in_time,
     clock_out_time,
@@ -94,6 +98,7 @@ export default function Dashboard({ history }) {
       id,
       description,
       profession,
+      user,
       raw_clock_in_time: clock_in_time,
       raw_clock_out_time: clock_out_time,
       clock_in_time: moment(clock_in_time).format("MMM Do YYYY, h:mm A"),
@@ -112,6 +117,7 @@ export default function Dashboard({ history }) {
       return createData(
         event.id,
         event.description,
+        event.user,
         event.profession,
         event.clock_in,
         event.clock_out,

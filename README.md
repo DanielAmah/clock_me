@@ -52,7 +52,10 @@ This a screenshot of the database design
 ### API / Business Logic
 
 Next, was creating the endpoints and writing out business logic. This was done by creating controllers which hooks up to routes.
- 
+- As an admin I can see all events created across the app and the associated email addresses of the user.
+- As a staff I can see only own events
+- Validation errors from endpoints were returned to the frontend to be displayed to the user.
+
  #### API List
 
  - Create user (` POST /users`)
@@ -78,23 +81,23 @@ I decided to use JWT based authentication which involves generating a token that
 I also created an Error handing service which help to rescue error across the app.
 
 
-#### Backend Testing
+### Backend Testing
 
 - TDD is an important part of software development process. I used RSpec and faker to test the backend code. And also ensured that each endpoint was tested.
 
-#### Frontend Design
+### Frontend Design
 
 The frontend was built using ReactJS framework and MaterialUI (frontend UI framework ) to speed up the development process.
 
-#### API integration
+### API integration
 
 The API was integrated using Axios on the React View. I created an Axios instance which can be reused for all HTTP requests/actions.
 
-#### Basic Frontend Testing
+### Basic Frontend Testing
 
 The frontend was tested using Jest and React Testing Library. It basically involved testing that component renders properly without crashing. This can be expanded into more detailed component testing.
 
-#### Deployment
+### Deployment
 The app was deployed to Heroku cloud service.
 
 
