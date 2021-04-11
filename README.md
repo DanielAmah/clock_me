@@ -18,10 +18,12 @@ I broke the project into small elements
 - Deployment
 
 ### Database Design
+
 This a screenshot of the database design
 ![Screenshot](db_design.png)
 
 #### Database table
+
 - A user table [email: string, username: string, password: string ]
 - A role table [ status: enum(admin, staff) ]
 - A user_role join table [user: reference by user_id, role: reference by role_id ]
@@ -48,9 +50,11 @@ This a screenshot of the database design
 - An event belongs to a user_profession
 
 ### API / Business Logic
+
 Next, was creating the endpoints and writing out business logic. This was done by creating controllers which hooks up to routes.
  
  #### API List
+
  - Create user (` POST /users`)
    - body params {user: {username: string, email: string, password: string, profession: string, password_confirmation: string } }
  - Create sign_in (`POST /login`)
@@ -73,16 +77,21 @@ I decided to use JWT based authentication which involves generating a token that
 
 I also created an Error handing service which help to rescue error across the app.
 
+
 #### Backend Testing
+
 - TDD is an important part of software development process. I used RSpec and faker to test the backend code. And also ensured that each endpoint was tested.
 
 #### Frontend Design
+
 The frontend was built using ReactJS framework and MaterialUI (frontend UI framework ) to speed up the development process.
 
 #### API integration
+
 The API was integrated using Axios on the React View. I created an Axios instance which can be reused for all HTTP requests/actions.
 
 #### Basic Frontend Testing
+
 The frontend was tested using Jest and React Testing Library. It basically involved testing that component renders properly without crashing. This can be expanded into more detailed component testing.
 
 #### Deployment
@@ -131,6 +140,7 @@ This is simple but in my opinion does not provide an opportunity for a user to h
 - Integrate Travis CI for continious integration and deployment.
 
 #### If give a month, I would add some new features, Some of these features includes:
+
 - Building out the admin dashboard, for better tracking and utilizing some of the existing admin endpoints as well as creating new endpoints to support it.
 - I might consider removing the edit functionality from the staff user and allowing only admins to edit events. I feel it makes more sense that a staff user should not be able to edit their own entries or entries from other users. Edit request should be forwarded to admin users via mail or in app. The admin user, would review that request and decide to either go forward with the edits based on the reason or decline the edit.
 - From within the dashboard, I should see all users events and filter by profession and role.
@@ -203,10 +213,13 @@ rails db:seed
 ```
 
 ### Authentication
-Authentication was implemented using JSON Web Token(JWT) authentication and encrypt the password in the database.
 
+Authentication was implemented using JSON Web Token(JWT) authentication and encrypt the password in the database.
+- add a .env file to your root directory with this content
+JWT_SECRET='your-secret-key'
 
 ## Usage
+
 To start the server, run the command
 
 ```
