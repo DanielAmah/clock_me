@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(10),
     width: "100%",
-    minHeight: 400,
+    minHeight: 500,
     height: "100%",
     display: 'flex',
     flexDirection: 'column',

@@ -142,10 +142,10 @@ This application is designed to run locally on the Rails development server with
 
 ### Prerequisites
 Developed and tested with the following components:
-- ruby-2.6.3
+- ruby-2.7.3
 - rails 6.0.3
 - postgreSQL 13.2
-- bundler 2.2.15
+- bundler 2.2.16
 
 For help setting up Rails, see https://guides.rubyonrails.org/getting_started.html.
 
@@ -168,12 +168,13 @@ Install gems
 bundle install
 ```
 
-if you are getting the error 
+Troubleshooting
+
 `Your Ruby version is 2.X.X, but your Gemfile specified 2.X.X`. Try to install the version specified in this
 readme
 You can use `rvm`. If you don't have rvm, You can install it on your system from the link https://rvm.io/
 
-run `rvm use 2.6.3` on your terminal, next run `gem install bundler`
+run `rvm use 2.7.3` on your terminal, next run `gem install bundler`
 
 
 Install frontend packages
@@ -211,6 +212,23 @@ Navigate to your browser and enter the url below.
 
 ```
 http://localhost:3000
+```
+
+
+### Login credentials
+
+Login to the app as admin/staff
+
+Admin credentials
+```
+username: admin
+password: password123!
+```
+
+Staff credentials
+```
+username: staff
+password: password123!
 ```
 
 ## Test

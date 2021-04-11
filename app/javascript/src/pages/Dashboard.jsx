@@ -34,8 +34,10 @@ export default function Dashboard({ history }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    const ac = new AbortController();
     setIsLoading(true);
     listAllUserEvents();
+    return () => ac.abort(); 
   }, []);
 
   const listAllUserEvents = async () => {
