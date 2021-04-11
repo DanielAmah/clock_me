@@ -1,4 +1,9 @@
 
+# Clockme
+
+An event logging app for teachers and professionals.
+
+https://clockme-app.herokuapp.com/
 
 ## Coding Challenge Questions and Answers
 ### Please describe your process for approaching the code challenge. What kind of planning did you do? Did your plans change as you began coding?
