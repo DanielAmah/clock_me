@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'jwt'
+gem 'dotenv-rails'
 
 gem 'rack-cors'
 
