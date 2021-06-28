@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
   include ExceptionHandler
   before_action :authenticate_request
-  # attr_reader :@current_user
-  
+
   protect_from_forgery with: :null_session
 end
 

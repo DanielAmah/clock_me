@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
+gem 'rails', '~> 6.1', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -34,6 +35,10 @@ gem 'dotenv-rails'
 gem 'rack-cors'
 
 gem 'active_model_serializers'
+
+gem 'rbs_rails', require: false
+
+gem 'steep'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -5,4 +5,5 @@ class Role < ApplicationRecord
   ALL_ROLES = %w[staff admin].freeze
 
   enum status: ALL_ROLES.zip(ALL_ROLES).to_h
+
 end
